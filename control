@@ -1,0 +1,9 @@
+Package: com.naken.pureinstagram
+Name: PureInstagram
+Depends: mobilesubstrate
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Remove Ads in Instagram.
+Maintainer: snakeninny
+Author: snakeninny
+Section: Tweaks
