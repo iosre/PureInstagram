@@ -7,7 +7,7 @@
 	NSArray *objects = %orig;
 	NSMutableArray *objectsWithoutAds = [@[] mutableCopy];	
 	for (id object in objects)
-		if ([object isKindOfClass:(NSClassFromString(@"IGFeedItem"))] && !(((IGFeedItem *)object).isSponsored || ((IGFeedItem *)object).isSponsoredApp))
+		if (![object isKindOfClass:(NSClassFromString(@"IGFeedItem"))] || ([object isKindOfClass:(NSClassFromString(@"IGFeedItem"))] && !(((IGFeedItem *)object).isSponsored || ((IGFeedItem *)object).isSponsoredApp)))
 			[objectsWithoutAds addObject:object];
 	return objectsWithoutAds;
 }
